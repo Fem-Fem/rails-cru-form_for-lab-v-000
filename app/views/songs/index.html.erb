@@ -1,11 +1,9 @@
-<p><%= @song.name %></p>
 
 
 <div>
-  <% @students.each do |student| %>
+  <% @songs.each do |song| %>
     <div>
-      <%= link_to student.to_s, student_path(student.id) %>
-      <h1>This student is currently inactive.</h1>
+      <p><%= @song.name %></p>
     </div>
   <% end %>
 </div>
