@@ -1,9 +1,12 @@
+require 'pry'
+
 class ArtistsController < ApplicationController
 
   def index
   end
 
   def show
+    @artist = Artist.find(params[:id])
   end
 
   def new
@@ -11,6 +14,7 @@ class ArtistsController < ApplicationController
   end
 
   def edit
+    @artist = Artist.find(params[:id])
   end
 
   def create
@@ -20,6 +24,9 @@ class ArtistsController < ApplicationController
   end
 
   def update
+    @artist = Artist.find(params[:id])
+    @artist.update(artist_params)
+    redirect_to artist_path(@artist)
   end
 
   def artist_params
