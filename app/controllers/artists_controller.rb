@@ -3,7 +3,7 @@ require 'pry'
 class ArtistsController < ApplicationController
 
   def index
-    @artist = Artist.find(params[:id])
+    @artists = Artist.all
   end
 
   def show
