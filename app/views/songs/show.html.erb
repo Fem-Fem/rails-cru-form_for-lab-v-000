@@ -1,7 +1,7 @@
 <h1><%= @song.name %></h1>
 <div>
   <%= binding.pry%>
-  <%= link_to @song.genre_id.to_s, genre_path(@song.genre_id) %>
+  <%= link_to "My Genre", genre_path(@song.genre_id) %>
   <p>My Genre</p>
 </div>
 <div>
