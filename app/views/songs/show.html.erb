@@ -5,6 +5,6 @@
 </div>
 <div>
   <%= binding.pry %>
-  <%= link_to @song.to_s, song_path(@song.id) %>
+  <%= link_to @song.genre_id.to_s, song_path(@song.genre_id) %>
   <p>My Artist</p>
 </div>
